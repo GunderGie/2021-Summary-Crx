@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+body{
+  width: 310px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+.titleContainer{
+  display:flex;
+  align-items: flex-end;
+  margin: 0.4rem 0rem 0.4rem 0.8rem;
+}
+#title{
+  font-size: 1.5rem;
+}
+#title img{
+  width: 35px;
+  vertical-align: text-bottom;
+}
+#title h3{
+  display: inline;
+  font-size: 1.5rem;
+  margin-left: 0.4rem;
+}
+.superscript{
+  font-size: 75%;
+  margin-bottom: 0.9rem;
+  padding: 0 0.2rem;
+  border-radius: 10%;
+  background-color: #bbcfe9;
+}
+a{
+  color:black;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(71, 106, 201);
+  /* text-decoration: underline; */
+}
+#select{
+  background: linear-gradient(to right, #2745f2 25%, #9f36f5);
+  /* background: linear-gradient(to right, rgb(90, 90, 139), blue, blue); */
+  margin: 0;
+  padding: 0.5rem;
+  color: white;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+#OptionSettingBtn{
+  margin-left: auto;
+  margin-right: 0.4rem;
+}
+#OptionSettingBtn img{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+#sumBtn{
+  height: 1.5rem;
+  width: 90px;
+  margin: 0 10px;
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+#resultDiv {
+  background-color: rgb(240, 240, 240);
+  padding: 0.1rem 0.8rem 0.1rem 0.8rem;
+  /* padding: 0.8rem; */
+}
+
+#banner{
+  margin: 0.4rem 0rem 0.4rem 0.8rem;
+}
+#banner a{
+  color: gray;
+}
+#banner a:hover{
+  color: rgb(71, 106, 201);
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="options.css">
+    <meta charset="UTF-8">
+    <title>VaNSum Extension Settings</title>
+  </head>
+  <body>
+    <div class="container">
+        <div><h1>Options</h1></div>
+        <p class="optionP" id="topkOpt"><label for="topk">요약문 개수(1~3): </label>
+            <input type="radio" id="top1" name="topkRadios" value=1>
+            <label for="top1">1개</label>
+            <input type="radio" id="top2" name="topkRadios" value=2>
+            <label for="top2">2개</label>
+            <input type="radio" id="top3" name="topkRadios" value=3>
+            <label for="top3">3개</label>
+        </p>
+        <p id = "saveMsg"><br></p>
+
+        <p class="optionP" style="margin-bottom: 3rem;">옵션2: (추가예정)</p>
+        <p class="note">※ MatchSum은 모델 특성상 요약문 개수 설정을 지원하지 않습니다.</p>
+        <button id="closeBtn">Close</button>
+    </div>
+  </body>
+  <script src="options.js"></script>
+</html>

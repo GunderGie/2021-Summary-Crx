@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+body{
+    margin: 0;
+    background-color: #2745f2;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.container{
+    font-size: 125%;
+    width: calc(100vmin - 8rem);
+    height: calc(100vh - 2rem);
+    margin: 0 auto 0 auto;
+    padding: 1rem 4rem;
+
+    background-color: white;
+    box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.26);
+}
+
+.optionP{
+    font-weight: bold;
+}
+#saveMsg{
+    margin-bottom: 3rem;
+}
+#saveMsg > div{
+    transition: color 1s ease-in;
+}
+
+.note{
+    color: gray;
+    font-size: small;
+}
+input{
+    margin-right: 0;
+}
+button {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2745f2;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 7rem;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
