@@ -1,7 +1,8 @@
 let sumBtn = document.getElementById("sumBtn");
 let result = document.getElementById("resultDiv");
 let mdlSlc = document.getElementById("modelSelect");
-const modelList = ["KoBertSum", "MatchSum", "SummaRuNNer", "TextRank", "LexRank"];
+const modelList = ["KoBertSum", "MatchSum", "SummaRuNNer", "TextRank", "LexRank", "kobart", "kobart_rdrop"];
+const absMdlList = ["kobart", "kobart_rdrop"];
 class HTTPError extends Error{};
 
 // When the button is clicked, call api with url of current tab 
@@ -10,6 +11,7 @@ sumBtn.addEventListener("click", () => {
     
     //load selected model
     model = mdlSlc.options[mdlSlc.selectedIndex].value;
+    let isAbs = absMdlList.includes(model);
     //calling api with fetch()
     const URL_TO_API = "http://112.175.32.78:443";
     
@@ -88,9 +90,21 @@ sumBtn.addEventListener("click", () => {
           }
         }).then(jsons => {
           console.log(jsons["summary"]);
-
           let sumidx = jsons["summary"];
-          if( !Array.isArray(sumidx)){
+
+          if(isAbs){
+            result.textContent='';//clear resultDiv
+            
+            let newP = document.createElement("p");
+            newP.innerHTML = "주의: 생성식 요약은 본문의 맥락을 보장하지 않습니다.";
+            newP.setAttribute("class", "warning");
+            result.appendChild(newP);
+            
+            newP = document.createElement("p");
+            newP.innerHTML = jsons["summary"];
+            result.appendChild(newP);
+          }
+          else if( !Array.isArray(sumidx)){
             //text is too short error
             throw new Error(`Summarizing failed: ${sumidx}`);
           }

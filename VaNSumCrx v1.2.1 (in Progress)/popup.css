@@ -66,6 +66,12 @@ button {
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
+.warning{
+  color: #d70000;
+  background-color: #ffffa2;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.25rem;
+}
 #resultDiv {
   background-color: rgb(240, 240, 240);
   padding: 0.1rem 0.8rem 0.1rem 0.8rem;
